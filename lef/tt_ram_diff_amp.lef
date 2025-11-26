@@ -1,0 +1,36 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO tt_ram_diff_amp
+  CLASS BLOCK ;
+  FOREIGN tt_ram_diff_amp ;
+  ORIGIN 1.400 4.500 ;
+  SIZE 8.300 BY 225.260 ;
+  PIN VDPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 1.000 5.000 3.000 220.760 ;
+    END
+  END VDPWR
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 4.000 5.000 6.000 220.760 ;
+    END
+  END VGND
+  OBS
+      LAYER nwell ;
+        RECT -1.000 -0.200 6.900 2.400 ;
+      LAYER li1 ;
+        RECT -1.400 -4.100 6.700 2.150 ;
+      LAYER met1 ;
+        RECT -1.400 -4.500 6.700 2.400 ;
+  END
+END tt_ram_diff_amp
+END LIBRARY
+
